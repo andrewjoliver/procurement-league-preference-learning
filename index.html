@@ -1,0 +1,483 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Procurement League</title>
+    
+</head>
+
+<body>
+    
+    <div id="selectionContainer">
+        
+        <div id="leftArrow" onclick="loadNextCompany('left')">
+            <img src="left-arrow.png">
+        </div>
+        
+        <div id="jobScreen">
+            
+            <div id="company">
+                <p id="internalHeader"><u><b>Company Name: </b></u></p>
+                
+                <div id="info">
+                    <div id="row">
+                        <div id="columnTop">
+                            
+                            <p>Culture:</p>
+                            <div id="cultureInfo"></div>
+
+                        </div>
+
+                        <div id="columnTop">
+
+                            <p>Size:</p>
+                            <div id="sizeInfo"></div>
+                        
+                        </div>
+
+                    </div>
+
+                    <div id="row">
+                        <div id="column">
+                            
+                            <p>Industry:</p>
+                            <div id="industryInfo"></div>
+
+                        </div>
+
+                        <div id="column">
+                            
+                            <p>Advancement Likelihood:</p>
+                            <div id="advancementInfo"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                    
+            </div>
+            
+            <div id="compensation">
+                <p id="internalHeaderComp"><u><b>Compensation</b></u></p>
+                <div id="info">
+                    <div id="row">
+                        <div id="columnTop">
+                            
+                            <p>Salary:</p>
+                            <div id="salaryInfo"></div>
+                            
+
+                        </div>
+
+                        <div id="columnTop">
+                            
+                            <p>Benefits:</p>
+                            <div id="benefitsInfo"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="row">
+                        <div id="column">
+                            
+                            <p>Vacation Time:</p>
+                            <div id="vacationInfo"></div>
+
+                        </div>
+
+                        <div id="column">
+                            
+                            <p>Hours Per Week:</p>
+                            <div id="hourInfo"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div id="position">
+                <p id="internalHeader"><u><b>Position</b></u></p>
+                
+                <div id="positionInfo">
+                    
+                    <div id="positionRow">
+                        
+                        <div id="positionColumn">
+                            
+                            <p>Job Type:</p>
+                            <div id="typeInfo"></div>
+
+                        </div>
+
+                        <div id="positionColumn">
+                            
+                            <p>Job Function:</p>
+                            <div id="functionInfo"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="positionRow">
+                        
+                        <div id="positionColumn">
+                            
+                            <p>Commute:</p>
+                            <div id="commuteInfo"></div>
+
+                        </div>
+
+                        <div id="positionColumn">
+
+                            <p>Personal Skills Required:</p>
+                            <div id="personalSkillsInfo"></div>
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div id="positionRow">
+                        <div id="positionColumn">
+                            
+                            <p>Technical Skills Required:</p>
+                            <div id="technicalSkillsInfo"></div>
+
+                        </div>
+
+                        <div id="positionColumn">
+                            
+                            <p>Years of Experience Required:</p>
+                            <div id="yearsInfo"></div>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="rightArrow">
+            <img src="right-arrow.png" onclick="loadNextCompany('right')">
+        </div>
+    
+    </div>
+    
+    <div id="resultsContainer">
+        <h1>Results</h1>
+        <div id="resultsRow">
+            
+            <div id="swipedLeft">
+            
+                <p><u><b>Rejected Companies</b></u></p>
+                
+                <p>Culture WFA</p>
+                <div id="wfaRowCol">
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="rWordOne"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="rWordTwo"></p>
+                        </div>
+                    </div>
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="rWordThree"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="rWordFour"></p>
+                        </div>
+                    </div>
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="rWordFive"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="rWordSix"></p>
+                        </div>
+                    </div>
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="rWordSeven"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="rWordEight"></p>
+                        </div>
+                    </div>
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="rWordNine"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="rWordTen"></p>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <p>Size Analysis</p>
+                <div id="sizeRowCol">
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="lSizeOne"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="lSizeTwo"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="lSizeThree"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="lSizeFour"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="lSizeFive"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="lSizeSix"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <p>Industry Analysis</p>
+                <div id="sizeRowCol">
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="iOne"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="iTwo"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="iThree"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="iFour"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="iFive"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="iSix"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <p>Advancement Analysis</p>
+                <div id="sizeRowCol">
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="advOne"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="advTwo"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="advThree"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="advFour"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="advFive"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="advSix"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </div>
+            
+            
+            
+            <div id="swipedRight">
+            
+                <p><u><b>Accepted Companies</b></u></p>
+                
+                <p>Culture WFA</p>
+                <div id="wfRaowCol">
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="aWordOne"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="aWordTwo"></p>
+                        </div>
+                    </div>
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="aWordThree"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="aWordFour"></p>
+                        </div>
+                    </div>
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="aWordFive"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="aWordSix"></p>
+                        </div>
+                    </div>
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="aWordSeven"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="aWordEight"></p>
+                        </div>
+                    </div>
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="aWordNine"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="aWordTen"></p>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <p>Size Analysis</p>
+                <div id="sizeRowCol">
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="rSizeOne"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="rSizeTwo"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="rSizeThree"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="rSizeFour"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="rSizeFive"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="rSizeSix"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <p>Industry Analysis</p>
+                <div id="sizeRowCol">
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="irOne"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="irTwo"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="irThree"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="irFour"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="irFive"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="irSix"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <p>Advancement Analysis</p>
+                <div id="sizeRowCol">
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="advrOne"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="advrTwo"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="advrThree"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="advrFour"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="analysisRow">
+                        <div id="analysisColumn">
+                            <p id="advrFive"></p>
+                        </div>
+                        <div id="analysisColumn">
+                            <p id="advrSix"></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            
+            </div>        
+        
+        
+        </div>
+    
+    </div>
+        
+
+</body>
+
+</html>

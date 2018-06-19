@@ -1,0 +1,144 @@
+#jobScreen{
+    position: absolute;
+    top: 5%;
+    left: 12.5%;
+    width: 75%;
+    height: 80%;
+    background-color: #E0E0E0;
+
+}
+body p{
+    text-align: center;
+}
+
+#leftArrow img, #rightarrow img{
+    height: 35%;
+    position: absolute;
+    top: 30%;
+}
+#leftArrow img:hover, #rightarrow img:hover{
+    cursor: pointer;
+}
+#leftArrow img{
+    left: 1%;
+}
+#rightArrow img{
+    right: 1%;
+}
+
+#company, #compensation, #position{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+#company, #compensation{
+    height: 28.5%;
+}
+#position{
+    height: 43%;
+}
+
+
+
+
+#info{
+    margin: 1%;
+}
+#column{
+    border: 1px solid black;
+}
+#column {
+    float: left;
+    width: 49.7%;
+    height: 30%;
+}
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#columnTop{
+    border: 1px solid black;
+    float: left;
+    width: 49.7%;
+    height: 40%;
+}
+
+
+
+#positionInfo{
+    margin: 1%;
+}
+#positionColumn{
+    border: 1px solid black;
+}
+#positionColumn {
+    float: left;
+    width: 49.7%;
+    height: 27%;
+}
+#positionRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#internalHeader, #internalHeaderComp{
+    color: indianred;
+}
+
+
+
+
+#resultsContainer h1{
+    position: absolute;
+    margin: 0;
+    margin-left: 42%;
+    text-decoration: underline;
+    font-size: 300%;
+    top: 86%;
+    text-align: center;
+}
+#swipedLeft, #swipedRight{
+    width: 48%;
+    border: 1px solid black;
+    position: absolute;
+    top: 95%;
+    height: 110%;
+    text-align: center;
+    margin: 1%;
+}
+#swipedRight{
+    left: 50%;
+}
+#swipedLeft p, #swipedRight p{
+    font-size: 150%;
+    margin: 3%;
+}
+
+
+#analysisColumn{
+    border: 1px solid black;
+}
+#analysisColumn{
+    float: left;
+    margin-left: 1%;
+    width: 48%;
+    height: 3%;
+}
+#analysisRow{
+    margin-top: 1%;
+}
+#analysisRow:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+#analysisColumn p{
+    font-size: 100%;
+}
+
+
+
