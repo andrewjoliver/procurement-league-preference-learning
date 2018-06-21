@@ -6,7 +6,7 @@ var masterArr = [];
 
 
 function loadNextCompany(direction){
-    if (numClicks == 98){
+    if (numClicks == 97){
             printData();
             numClicksLeft = 0;
             numClicksRight = 0;
@@ -633,10 +633,10 @@ function automatedSelection() {
         loadNextCompany("left");
     }
     
-    if (i < 47){
+    if (i < 97){
       window.setTimeout(automatedSelection, 0);
     }
-    else{
+    else{        
         save(output, "firstoutput.csv");
         save(output1, "secondoutput.csv");
         location.reload();
@@ -644,9 +644,9 @@ function automatedSelection() {
     i++
 }
 
-/*
+
 window.onload = automatedSelection();
-*/
+
 
 
 
